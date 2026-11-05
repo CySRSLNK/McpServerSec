@@ -1,0 +1,12 @@
+{
+  "name": "06_defense_influence_only",
+  "title": "防御：只做影响污点（不可信在场不外发）",
+  "deployment": "INJECT",
+  "policy": "influence-only",
+  "invariants": [
+    "F1",
+    "F7"
+  ],
+  "expect": "unsafe",
+  "note": "挡住 F7，但用户自己要求上传时 F1 仍成立"
+}

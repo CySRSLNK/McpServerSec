@@ -1,0 +1,11 @@
+{
+  "name": "08_abc_storage",
+  "title": "A 读 → B 写 → C 发（共享存储通道）",
+  "deployment": "ABC",
+  "policy": "naive",
+  "invariants": [
+    "F1"
+  ],
+  "expect": "unsafe",
+  "note": "路径走参数边，内容走存储边"
+}

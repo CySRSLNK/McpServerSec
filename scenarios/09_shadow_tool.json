@@ -1,0 +1,11 @@
+{
+  "name": "09_shadow_tool",
+  "title": "影子工具：声明只读、实测外发",
+  "deployment": "MAIN",
+  "policy": "naive",
+  "invariants": [
+    "F5"
+  ],
+  "expect": "unsafe",
+  "note": "单台服务器即违反 → 应被标注为「局部缺陷」而非组合漏洞"
+}

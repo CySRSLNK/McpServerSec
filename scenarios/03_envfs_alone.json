@@ -1,0 +1,15 @@
+{
+  "name": "03_envfs_alone",
+  "title": "envfs 单独运行",
+  "deployment": "INJECT",
+  "policy": "naive",
+  "invariants": [
+    "F1",
+    "F7"
+  ],
+  "scope": [
+    "envfs"
+  ],
+  "expect": "safe",
+  "note": "只读，不外发"
+}

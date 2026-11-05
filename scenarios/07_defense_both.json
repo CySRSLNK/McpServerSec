@@ -1,0 +1,12 @@
+{
+  "name": "07_defense_both",
+  "title": "防御：数据标签 + 影响污点",
+  "deployment": "INJECT",
+  "policy": "hardened",
+  "invariants": [
+    "F1",
+    "F7"
+  ],
+  "expect": "safe",
+  "note": "两条规则都放在服务器之间，判定变为 SAFE"
+}

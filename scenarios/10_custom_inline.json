@@ -1,0 +1,68 @@
+{
+  "name": "10_custom_inline",
+  "title": "内联自定义部署（演示可扩展性）",
+  "deployment_inline": {
+    "name": "CUSTOM",
+    "servers": [
+      {
+        "name": "feed",
+        "states": [
+          "idle",
+          "loaded"
+        ],
+        "start": "idle"
+      },
+      {
+        "name": "post",
+        "states": [
+          "idle"
+        ],
+        "start": "idle"
+      }
+    ],
+    "tools": [
+      {
+        "server": "feed",
+        "name": "pull",
+        "kind": "search",
+        "src": [
+          "idle",
+          "loaded"
+        ],
+        "dst": "loaded",
+        "observed": {
+          "reads": [
+            "net:any"
+          ],
+          "inbound": true
+        },
+        "out": {
+          "prov": "external",
+          "integ": "untrusted",
+          "sens": "public",
+          "auth": "none"
+        }
+      },
+      {
+        "server": "post",
+        "name": "publish",
+        "kind": "send",
+        "src": [
+          "idle"
+        ],
+        "dst": "idle",
+        "observed": {
+          "outbound": true,
+          "needs": "self"
+        },
+        "consumes": true
+      }
+    ]
+  },
+  "policy": "naive",
+  "invariants": [
+    "F7"
+  ],
+  "expect": "unsafe",
+  "note": "加场景只需写 JSON，不用改 Python"
+}
