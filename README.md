@@ -1,5 +1,5 @@
 # ChainBreak — MCP 跨服务器组合调用的安全性判定
-
+[![M8ven Score](https://m8ven.ai/badge/mcp/cysrslnk-mcpserversec-tef2a9?v=f700db75a3d9b59e8d4fbfd5eb54caff)](https://m8ven.ai/mcp/cysrslnk-mcpserversec-tef2a9?s=readme)
 给定部署 `D` 与安全属性 `G`，判定 `D ⊨ G`，输出三态：**UNSAFE / SAFE / UNKNOWN**。
 
 安全 = **不泄露信息** ∧ **不被不可信内容诱导执行特权动作**。
